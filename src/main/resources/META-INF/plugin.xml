@@ -1,0 +1,32 @@
+<idea-plugin>
+    <id>org.shortcuts.shorterkeys</id>
+    <name>Shorter Keys</name>
+    <vendor>Mandar</vendor>
+
+    <description><![CDATA[
+    Shorter keys assists users in learning shortcuts.<br>
+    <em>CSE 518 project</em>
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <application-components>
+        <component>
+            <implementation-class>org.shortcuts.shorterkeys.action.EventListener</implementation-class>
+        </component>
+    </application-components>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <notificationGroup
+                displayType="BALLOON"
+                id="Shorter Keys"
+        />
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
