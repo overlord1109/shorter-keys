@@ -24,6 +24,8 @@
                 displayType="BALLOON"
                 id="Shorter Keys"
         />
+        <toolWindow factoryClass="org.shortcuts.shorterkeys.ui.ShorterKeysPanelFactory" id="Shorter Keys" anchor="right"/>
+        <applicationService serviceImplementation="org.shortcuts.shorterkeys.stats.StatisticsService"/>
     </extensions>
 
     <actions>

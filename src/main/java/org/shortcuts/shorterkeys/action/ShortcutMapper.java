@@ -22,7 +22,9 @@ public class ShortcutMapper {
             if (i > 0) {
                 sb.append(" or ");
             }
-            sb.append("'").append(KeymapUtil.getShortcutText(shortcut)).append("'");
+            sb.append('\'')
+                    .append(KeymapUtil.getShortcutText(shortcut))
+                    .append('\'');
         }
         return sb.toString();
     }
