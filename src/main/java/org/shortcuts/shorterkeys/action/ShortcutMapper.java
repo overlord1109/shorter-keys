@@ -7,8 +7,15 @@ import com.intellij.openapi.keymap.KeymapUtil;
 
 public class ShortcutMapper {
 
-    private final KeymapManager keyMapManager = KeymapManager.getInstance();
+    private final KeymapManager keyMapManager;
 
+    public ShortcutMapper() {
+        this.keyMapManager = KeymapManager.getInstance();
+    }
+
+    /**
+    *   Fetch concatenated shortcuts string from keymap using action ID
+    **/
     public String getKeyboardShortcut(String actionId) {
         Keymap keymap = keyMapManager.getActiveKeymap();
         Shortcut[] shortcuts = keymap.getShortcuts(actionId);

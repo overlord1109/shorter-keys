@@ -6,15 +6,16 @@ import org.shortcuts.shorterkeys.stats.StatsObject;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Custom JList rendering for missed shortcuts list
+ **/
 public class StatsObjectRenderer extends JLabel implements ListCellRenderer<StatsObject>{
 
     @Override
     public Component getListCellRendererComponent(JList<? extends StatsObject> list, StatsObject obj, int i, boolean isSelected, boolean cellHasFocus) {
-        final Color foreground = list.getForeground();
-        String message = obj.toString();
-        setText(message);
-        setForeground(foreground);
-        setBorder(JBUI.Borders.empty(2, 10));
+        setForeground(list.getForeground());
+        setBorder(JBUI.Borders.empty(4, 12));
+        setText(obj.toString());
         return this;
     }
 }

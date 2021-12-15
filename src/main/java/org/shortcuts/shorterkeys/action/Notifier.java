@@ -4,6 +4,9 @@ import com.intellij.notification.NotificationGroup;
 import com.intellij.notification.NotificationGroupManager;
 import com.intellij.notification.NotificationType;
 
+/**
+ * Create a balloon pop-up notification using the given title and notification content
+ **/
 public class Notifier {
 
     private final NotificationGroup notificationGroup;

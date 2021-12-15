@@ -13,6 +13,10 @@ import org.shortcuts.shorterkeys.stats.StatisticsService;
 
 import javax.swing.*;
 
+
+/**
+ * UI class for tool window
+ **/
 public class ShorterKeysPanelFactory  implements ToolWindowFactory, DumbAware {
 
     @Override

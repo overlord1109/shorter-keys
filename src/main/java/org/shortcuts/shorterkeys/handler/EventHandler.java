@@ -12,6 +12,9 @@ import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
+/**
+ * Invoke notifier, mapper and stats service in correct order for relevant events
+ **/
 public class EventHandler {
 
     private final Notifier notifier;
@@ -60,7 +63,6 @@ public class EventHandler {
     }
 
     private void handleKeyboardEvent(String description) {
-        //count statistic
         statService.shortcutUsed(description);
     }
 

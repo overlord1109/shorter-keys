@@ -14,9 +14,12 @@ import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
+/**
+ * Listen to actions and invoke handler for relevant events
+ **/
 public class EventListener implements AnActionListener, Disposable {
 
-    EventHandler eventHandler;
+    private final EventHandler eventHandler;
 
     public EventListener() {
         Topics.subscribe(AnActionListener.TOPIC, this, this);
@@ -26,9 +29,8 @@ public class EventListener implements AnActionListener, Disposable {
     @Override
     public void beforeActionPerformed(@NotNull AnAction action, AnActionEvent event) {
         InputEvent inputEvent = event.getInputEvent();
-        if (!(inputEvent instanceof KeyEvent) && !(inputEvent instanceof MouseEvent))
-            return;
-        eventHandler.handle(action, event);
+        if (inputEvent instanceof KeyEvent || inputEvent instanceof MouseEvent)
+            eventHandler.handle(action, event);
     }
 
     @Override

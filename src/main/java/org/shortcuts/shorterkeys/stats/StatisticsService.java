@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Maintain statistics for keyboard shortcut uses and misses
+ **/
 public class StatisticsService {
 
     private final HashMap<String, StatsObject> stats;
